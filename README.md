@@ -104,3 +104,15 @@ PostgreSQLクラスタを停止し、TCP/5432の待受がなくなる障害を�
 障害対応では、最初から設定ファイルを変更するのではなく、まず事象と影響範囲を確認し、ネットワーク・サービス・設定・権限・リソースなどの観点から段階的に切り分けることが重要だと確認しました。
 
 また、同じDB接続障害でも、接続許可設定の問題ではTCP/5432への接続が成功する一方、サービス停止時には Connection refused となるなど、エラー内容やポート状態から原因の範囲を絞り込めることを検証しました。
+
+## 証跡ログ
+
+各障害について、障害発生時と復旧後の実行結果を保存しています。
+
+| 障害 | 障害時 | 復旧後 |
+|---|---|---|
+| Apache起動障害 | [failure.txt](evidence/apache/failure.txt) | [recovery.txt](evidence/apache/recovery.txt) |
+| PostgreSQL接続許可設定ミス | [failure.txt](evidence/postgresql-access/failure.txt) | [recovery.txt](evidence/postgresql-access/recovery.txt) |
+| ファイル権限ミス | [failure.txt](evidence/permission/failure.txt) | [recovery.txt](evidence/permission/recovery.txt) |
+| ディスク使用率逼迫 | [failure.txt](evidence/disk/failure.txt) | [recovery.txt](evidence/disk/recovery.txt) |
+| PostgreSQLサービス停止 | [failure.txt](evidence/postgresql-service/failure.txt) | [recovery.txt](evidence/postgresql-service/recovery.txt) |

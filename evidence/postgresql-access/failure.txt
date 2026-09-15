@@ -1,0 +1,15 @@
+$ curl http://localhost/dbtest.php
+
+Database connection failed.
+
+$ nc -zv 192.168.100.20 5432
+
+Connection to 192.168.100.20 5432 port [tcp/postgresql] succeeded!
+
+$ psql -h 192.168.100.20 -U webuser -d webappdb
+
+psql: error: connection to server at "192.168.100.20", port 5432 failed:
+FATAL: no pg_hba.conf entry for host "192.168.100.10", user "webuser", database "webappdb", SSL encryption
+
+connection to server at "192.168.100.20", port 5432 failed:
+FATAL: no pg_hba.conf entry for host "192.168.100.10", user "webuser", database "webappdb", no encryption

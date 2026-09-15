@@ -1,0 +1,17 @@
+$ sudo systemctl restart apache2
+
+Job for apache2.service failed because the control process exited with error code.
+See "systemctl status apache2.service" and "journalctl -xeu apache2.service" for details.
+
+$ systemctl status apache2
+
+Active: failed (Result: exit-code)
+Status: "Reading configuration..."
+
+AH00526: Syntax error on line 226 of /etc/apache2/apache2.conf:
+Invalid command 'InvalidDirectiveTest'
+
+$ sudo apache2ctl configtest
+
+AH00526: Syntax error on line 226 of /etc/apache2/apache2.conf:
+Invalid command 'InvalidDirectiveTest', perhaps misspelled or defined by a module not included in the server configuration

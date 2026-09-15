@@ -1,0 +1,10 @@
+$ df -h /mnt/disk-test
+
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/loop3      172M  151M  7.2M  96% /mnt/disk-test
+
+$ sudo du -ah /mnt/disk-test | sort -rh | head
+
+151M    /mnt/disk-test
+150M    /mnt/disk-test/large.log
+16K     /mnt/disk-test/lost+found

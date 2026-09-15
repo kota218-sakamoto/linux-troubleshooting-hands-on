@@ -1,0 +1,12 @@
+$ ls -l /var/www/html/permission-test.html
+
+-rw-r--r-- 1 root root 25 Sep 15 09:22 /var/www/html/permission-test.html
+
+$ curl -i http://localhost/permission-test.html
+
+HTTP/1.1 200 OK
+Server: Apache/2.4.66 (Ubuntu)
+Content-Length: 25
+Content-Type: text/html
+
+<h1>Permission Test</h1>

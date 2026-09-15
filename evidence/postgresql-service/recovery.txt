@@ -1,0 +1,21 @@
+$ psql -h 192.168.100.20 -U webuser -d webappdb
+
+Password for user webuser:
+
+psql (18.6 (Ubuntu 18.6-0ubuntu0.26.04.1))
+SSL connection (protocol: TLSv1.3, cipher: TLS_AES_256_GCM_SHA384, compression: off, ALPN: postgresql)
+
+Type "help" for help.
+
+webappdb=> \q
+
+$ curl http://localhost/dbtest.php
+
+<h1>Employee List</h1>
+
+<table>
+<tr><th>ID</th><th>Name</th><th>Department</th></tr>
+<tr><td>1</td><td>Sato</td><td>Infrastructure</td></tr>
+<tr><td>2</td><td>Tanaka</td><td>Network</td></tr>
+<tr><td>3</td><td>Suzuki</td><td>Cloud</td></tr>
+</table>

@@ -1,0 +1,17 @@
+$ sudo apache2ctl configtest
+
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name
+Syntax OK
+
+$ systemctl status apache2
+
+Active: active (running)
+Status: "Processing requests..."
+
+$ curl http://localhost
+
+<h1>Welcome to web01</h1>
+
+$ curl http://localhost/dbtest.php
+
+<h1>Employee List</h1>
