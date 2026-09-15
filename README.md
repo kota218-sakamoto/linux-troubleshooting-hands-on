@@ -12,6 +12,7 @@ Linuxサーバーで発生する代表的な障害に対して、コマンドの
 |---|---|---|
 | WEB01 | 192.168.100.10 | Ubuntu / Apache / PHP |
 | DB01 | 192.168.100.20 | Ubuntu / PostgreSQL 18 |
+
 WEB01からDB01上のPostgreSQLへ接続し、Webページからデータベースの内容を表示する構成を使用しています。
 
 ## 実施した障害対応
@@ -86,7 +87,6 @@ PostgreSQLクラスタを停止し、TCP/5432の待受がなくなる障害を�
 ## 使用した主なコマンド
 
     systemctl
-    journalctl
     apache2ctl
     curl
     nc
